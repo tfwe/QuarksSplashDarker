@@ -5,11 +5,11 @@
 <h5>Install</h5>
 
 ```
-kpackagetool5 -t Plasma/LookAndFeel -i <splash name>.tar.gz
+kpackagetool6 -t Plasma/LookAndFeel -i <splash name>.tar.gz
 ```
 
 <h5>Remove</h5>
 
 ```
-kpackagetool5 -t Plasma/LookAndFeel -r <splash name>
+kpackagetool6 -t Plasma/LookAndFeel -r <splash name>
 ```

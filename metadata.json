@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "adhemarks@gmail.com",
+                "Name": "adhe"
+            }
+        ],
+        "Category": "",
+        "Description": "QuarksSplash for Plasma KDE",
+        "Id": "QuarksSplashDarker",
+        "License": "MIT",
+        "Name": "QuarksSplashDarker",
+        "ServiceTypes": [
+            "Plasma/LookAndFeel"
+        ],
+        "Version": "1.0",
+        "Website": ""
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-KDE-ParentApp": "",
+    "X-Plasma-MainScript": "defaults"
+}

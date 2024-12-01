@@ -1,36 +1,27 @@
 { stdenv
 , lib
 , fetchFromGitHub
-, cmake
-, extra-cmake-modules
-, plasma-framework
 }:
 
 stdenv.mkDerivation rec {
   pname = "quarks-splash-darker";
-  version = "1.0";
+  version = "unstable-2024-01-21";
 
   src = fetchFromGitHub {
     owner = "tfwe";
     repo = "QuarksSplashDarker";
-    rev = "v${version}";
-    sha256 = ""; # Add SHA256 hash after first build attempt
+    rev = "main";
+    sha256 = "sha256-Ld1u2J8qU0DCeYYO2f28y9YAvOzducrmcKxl07bnCmk=";
   };
 
-  nativeBuildInputs = [
-    cmake
-    extra-cmake-modules
-  ];
-
-  buildInputs = [
-    plasma-framework
-  ];
+  dontBuild = true;
+  dontConfigure = true;
 
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out/share/plasma/look-and-feel
-    cp -r contents metadata.desktop $out/share/plasma/look-and-feel/${pname}
+    mkdir -p $out/share/plasma/look-and-feel/${pname}
+    cp -r contents metadata.json $out/share/plasma/look-and-feel/${pname}/
 
     runHook postInstall
   '';
